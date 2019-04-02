@@ -1,0 +1,9 @@
+FROM centos:6.9
+RUN curl -o /etc/yum.repos.d/epel-6.repo http://mirrors.aliyun.com/repo/epel-6.repo && \
+    curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo && \
+    yum install openssh-server  nginx -y && \
+    service sshd start && \
+    echo '123456' | passwd --stdin root
+ADD init.sh /init.sh
+EXPOSE 80 22
+CMD ["/bin/bash","/init.sh"]
