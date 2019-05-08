@@ -1,0 +1,5 @@
+[nginx]
+name=nginx
+baseurl=http://nginx.org/packages/centos/7/$basearch/
+enabled=1
+gpgcheck=0
