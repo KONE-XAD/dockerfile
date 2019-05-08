@@ -1,0 +1,2 @@
+### docker build -tag centos7_nginx_proxy:v01 
+### docker run -d --name nginx-proxy-01 centos7_nginx_proxy:v01 192.168.1.1
